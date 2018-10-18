@@ -18,6 +18,14 @@ var found = myArray.find(function (item) {
   return item === 4;
 });
 console.log("Item found:", found);
+
+var returningObjects = function returningObjects() {
+  return {
+    name: 'Douglas Haubert'
+  };
+};
+
+console.log('returnedObject:', returningObjects());
 /**
  * Learning class syntax
  *  class List {

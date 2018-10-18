@@ -2,34 +2,30 @@
 
 const myArray = [1,3,4,5,6,7,8];
 
-const newArray = myArray.map( (item, index) => {
-    return item + index
-});
+const newArray = myArray.map( (item, index) => item + index );
 
 console.log('My new array:', newArray);
 
-const sum = myArray.reduce( (total, current) => {
-    return total += current;
-}, 0);
+const sum = myArray.reduce( (total, current) =>  total += current, 0);
 
 console.log('Array sum is: ', sum);
 
 
 
-const filteredOdd = myArray.filter( (item) => {
-    return item % 2;
-});
+const filteredOdd = myArray.filter( item => item % 2);
 
 
 console.log('Odd numbers:', filteredOdd)
 
-const found = myArray.find( (item) => {
-   return item === 4; 
-});
+const found = myArray.find( item => item === 4 );
 
 
 console.log("Item found:", found);
 
+
+const returningObjects = () => ({ name: 'Douglas Haubert'});
+
+console.log('returnedObject:', returningObjects());
 
 /**
  * Learning class syntax

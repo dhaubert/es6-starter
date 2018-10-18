@@ -1,3 +1,32 @@
+/** REST - SPREAD */
+
+const superuser = {
+    supername: 'Douglas',
+    superage: 25,
+    address : {
+        city: 'Santa Maria',
+        state: 'RS',
+        country: 'Brazil',
+    },
+    
+};
+
+let { supername, ...rest} = superuser;
+
+const arr = [1,2,3,4];
+
+const [a, b, ... c] = arr;
+
+console.log('a', a, 'b', b, 'c', c);
+
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+
+let arr3 = [...arr1, ...arr2];
+
+console.log('merged array: ', arr3);
+
+
 /** Learning object destructuring */
 
 const user = {

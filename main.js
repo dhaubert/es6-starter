@@ -1,4 +1,32 @@
-/** Learning array manipulations */
+/** Learning object destructuring */
+
+const user = {
+    name: 'Douglas',
+    age: 25,
+    address : {
+        city: 'Santa Maria',
+        state: 'RS',
+        country: 'Brazil',
+    },
+    
+};
+
+console.log('user', user);
+
+// old way 
+//const name = user.name;
+//const country = user.address.country;
+
+//es6 way
+const { name, address : { country } } = user;
+
+console.log('The user ' + name + ' currently lives in ', country)
+
+const displayUserInfo = ({name, age}) => console.log('User name is '+ name + " and he is " + age + ' years old');
+
+displayUserInfo(user);
+
+/** Learning array manipulations, arrow functions, default values */
 
 const myArray = [1,3,4,5,6,7,8];
 
@@ -26,6 +54,12 @@ console.log("Item found:", found);
 const returningObjects = () => ({ name: 'Douglas Haubert'});
 
 console.log('returnedObject:', returningObjects());
+
+
+const defaultParams = (a = 1, b = 43) => a + b;
+
+console.log('Default parameters (expecting 44): ', defaultParams());
+console.log('Default parameters (expecting 2): ', defaultParams(1,1));
 
 /**
  * Learning class syntax

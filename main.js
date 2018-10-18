@@ -1,4 +1,39 @@
-class List {
+/** Learning array manipulations */
+
+const myArray = [1,3,4,5,6,7,8];
+
+const newArray = myArray.map( (item, index) => {
+    return item + index
+});
+
+console.log('My new array:', newArray);
+
+const sum = myArray.reduce( (total, current) => {
+    return total += current;
+}, 0);
+
+console.log('Array sum is: ', sum);
+
+
+
+const filteredOdd = myArray.filter( (item) => {
+    return item % 2;
+});
+
+
+console.log('Odd numbers:', filteredOdd)
+
+const found = myArray.find( (item) => {
+   return item === 4; 
+});
+
+
+console.log("Item found:", found);
+
+
+/**
+ * Learning class syntax
+ *  class List {
     constructor() {
         this.data = [];
     }
@@ -19,11 +54,11 @@ class TodoList extends List {
     displayUser() {
         console.log(this.user)
     }
-    
-    
 }
 
 const myList = new TodoList();
 document.getElementById("new-todo").onclick = function(){
     myList.addTodo();
 }
+
+**/
